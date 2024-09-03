@@ -483,15 +483,6 @@ _data = {
 unique_name_in_owner = true
 script = ExtResource("1_22fn8")
 
-[node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = 91.0
-offset_top = -30.0
-offset_right = 168.0
-offset_bottom = -7.0
-theme_override_fonts/font = ExtResource("6_2gqf0")
-theme_override_font_sizes/font_size = 8
-text = "Score: "
-
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-7, -18)
 tile_set = SubResource("TileSet_vxh2e")
@@ -510,6 +501,16 @@ zoom = Vector2(4, 4)
 limit_bottom = 150
 limit_smoothed = true
 position_smoothing_enabled = true
+
+[node name="ScoreLabel" type="Label" parent="Player/Camera2D"]
+unique_name_in_owner = true
+offset_left = -123.0
+offset_top = -70.0
+offset_right = -46.0
+offset_bottom = -47.0
+theme_override_fonts/font = ExtResource("6_2gqf0")
+theme_override_font_sizes/font_size = 8
+text = "Score: "
 
 [node name="Killzone" parent="." instance=ExtResource("5_s2lc3")]
 position = Vector2(69, 96)
