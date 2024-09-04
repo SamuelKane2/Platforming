@@ -1,10 +1,8 @@
 extends Area2D
 
-@onready var game_manager = %GameManager
+@onready var player = $"../../Player"
 @onready var animation_player = $AnimationPlayer
 
 func _on_body_entered(body):
-	game_manager.add_point()
+	player.add_point()
 	animation_player.play("pickup")
-
-@onready var score_label = $"../../Player/Camera2D/ScoreLabel"
