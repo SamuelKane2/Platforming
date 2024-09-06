@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://sk20bbjpt14t"]
+[gd_scene load_steps=17 format=3 uid="uid://sk20bbjpt14t"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_22fn8"]
 [ext_resource type="PackedScene" uid="uid://cwgoueiswoy1l" path="res://scenes/player.tscn" id="1_wwc4u"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://0nw0jubu1nd" path="res://scenes/killzone.tscn" id="5_s2lc3"]
 [ext_resource type="FontFile" uid="uid://43l0r3bovijg" path="res://assets/fonts/PixelOperator8.ttf" id="6_2gqf0"]
 [ext_resource type="PackedScene" uid="uid://bp83g2s0h7xfi" path="res://scenes/slime.tscn" id="6_tlbul"]
+[ext_resource type="PackedScene" uid="uid://ic7hufvdk1th" path="res://scenes/redslime.tscn" id="10_ajel3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5661i"]
 texture = ExtResource("2_ibs1t")
@@ -634,12 +635,6 @@ text = "Space to jump"
 [node name="Slime" parent="Enemies" instance=ExtResource("6_tlbul")]
 position = Vector2(820, -110)
 
-[node name="Slime2" parent="Enemies" instance=ExtResource("6_tlbul")]
-position = Vector2(1186, 132)
-
-[node name="Slime3" parent="Enemies" instance=ExtResource("6_tlbul")]
-position = Vector2(1038, 130)
-
 [node name="Slime4" parent="Enemies" instance=ExtResource("6_tlbul")]
 position = Vector2(96, 18)
 
@@ -648,3 +643,9 @@ position = Vector2(310, -31)
 
 [node name="Slime2" parent="." instance=ExtResource("6_tlbul")]
 position = Vector2(849, -190)
+
+[node name="Slime3" parent="." instance=ExtResource("10_ajel3")]
+position = Vector2(1218, 142)
+
+[node name="Slime4" parent="." instance=ExtResource("10_ajel3")]
+position = Vector2(1007, 142)
