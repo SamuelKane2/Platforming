@@ -514,6 +514,15 @@ theme_override_font_sizes/font_size = 8
 text = "0"
 script = ExtResource("5_op6y2")
 
+[node name="YouDied" type="Label" parent="Player"]
+offset_left = -50.0
+offset_top = -43.0
+offset_right = 52.0
+offset_bottom = -2.0
+theme_override_fonts/font = ExtResource("6_2gqf0")
+theme_override_font_sizes/font_size = 16
+script = ExtResource("5_op6y2")
+
 [node name="Killzone" parent="." instance=ExtResource("5_s2lc3")]
 position = Vector2(69, 96)
 metadata/_edit_lock_ = true
@@ -593,3 +602,6 @@ text = "Space to jump"
 
 [node name="Slime" parent="Enemies" instance=ExtResource("6_tlbul")]
 position = Vector2(820, -110)
+
+[node name="Slime" parent="." instance=ExtResource("6_tlbul")]
+position = Vector2(103, 18)

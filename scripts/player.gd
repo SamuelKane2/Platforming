@@ -51,6 +51,7 @@ var score = 0
 func add_point():
 	score += 1
 	score_label.text = str(score)
-
+	
 @onready var killzone = $"../Killzone"
+
 
