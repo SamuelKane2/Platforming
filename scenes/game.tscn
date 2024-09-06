@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://sk20bbjpt14t"]
+[gd_scene load_steps=16 format=3 uid="uid://sk20bbjpt14t"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_22fn8"]
 [ext_resource type="PackedScene" uid="uid://cwgoueiswoy1l" path="res://scenes/player.tscn" id="1_wwc4u"]
 [ext_resource type="Texture2D" uid="uid://bcgub4sqj1red" path="res://assets/sprites/world_tileset.png" id="2_ibs1t"]
 [ext_resource type="PackedScene" uid="uid://do3gptixjxbhv" path="res://scenes/platform.tscn" id="3_ho814"]
 [ext_resource type="PackedScene" uid="uid://coy0o25gsq6fq" path="res://scenes/coin.tscn" id="4_dcpyy"]
+[ext_resource type="Script" path="res://scripts/ScoreLabel.gd" id="5_op6y2"]
 [ext_resource type="PackedScene" uid="uid://0nw0jubu1nd" path="res://scenes/killzone.tscn" id="5_s2lc3"]
 [ext_resource type="FontFile" uid="uid://43l0r3bovijg" path="res://assets/fonts/PixelOperator8.ttf" id="6_2gqf0"]
 [ext_resource type="PackedScene" uid="uid://bp83g2s0h7xfi" path="res://scenes/slime.tscn" id="6_tlbul"]
@@ -511,6 +512,7 @@ offset_bottom = -3.0
 theme_override_fonts/font = ExtResource("6_2gqf0")
 theme_override_font_sizes/font_size = 8
 text = "0"
+script = ExtResource("5_op6y2")
 
 [node name="Killzone" parent="." instance=ExtResource("5_s2lc3")]
 position = Vector2(69, 96)
