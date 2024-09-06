@@ -43,3 +43,12 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+var score = 0
+
+@onready var score_label: Label = $ScoreLabel
+
+func add_point():
+	score += 1
+	score_label.text = str(score)
+
