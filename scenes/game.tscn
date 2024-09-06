@@ -604,4 +604,4 @@ text = "Space to jump"
 position = Vector2(820, -110)
 
 [node name="Slime" parent="." instance=ExtResource("6_tlbul")]
-position = Vector2(103, 18)
+position = Vector2(0, -30)
