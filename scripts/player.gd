@@ -47,7 +47,7 @@ func _physics_process(delta):
 
 var score = 0
 
-@onready var score_label: Label = $ScoreLabel
+@onready var score_label: Label = %ScoreLabel
 
 func add_point():
 	score += 1
