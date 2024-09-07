@@ -250,17 +250,6 @@ limit_bottom = 150
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="ScoreLabel" type="Label" parent="Player"]
-unique_name_in_owner = true
-offset_left = -10.0
-offset_top = -26.0
-offset_right = 67.0
-offset_bottom = -3.0
-theme_override_fonts/font = ExtResource("6_2gqf0")
-theme_override_font_sizes/font_size = 8
-text = "0"
-script = ExtResource("5_op6y2")
-
 [node name="YouDied" type="Label" parent="Player"]
 unique_name_in_owner = true
 offset_left = -50.0
@@ -269,6 +258,17 @@ offset_right = 52.0
 offset_bottom = -2.0
 theme_override_fonts/font = ExtResource("6_2gqf0")
 theme_override_font_sizes/font_size = 16
+script = ExtResource("5_op6y2")
+
+[node name="ScoreLabel" type="Label" parent="Player"]
+unique_name_in_owner = true
+offset_left = -132.0
+offset_top = -77.0
+offset_right = -117.0
+offset_bottom = -64.0
+theme_override_fonts/font = ExtResource("6_2gqf0")
+theme_override_font_sizes/font_size = 8
+text = "0"
 script = ExtResource("5_op6y2")
 
 [node name="Killzone" parent="." instance=ExtResource("5_s2lc3")]
@@ -322,6 +322,18 @@ position = Vector2(498, -106)
 [node name="Coin11" parent="Coins" instance=ExtResource("4_dcpyy")]
 position = Vector2(658, -126)
 
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = 333.0
+offset_top = -109.0
+offset_right = 505.0
+offset_bottom = -55.0
+theme_override_colors/font_color = Color(0.0980392, 0.313726, 0.752941, 1)
+theme_override_fonts/font = ExtResource("6_2gqf0")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump"
+
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Platform" parent="Platforms" instance=ExtResource("3_ho814")]
@@ -342,15 +354,3 @@ position = Vector2(914, -148)
 
 [node name="Platform4" parent="Platforms" instance=ExtResource("3_ho814")]
 position = Vector2(728, -137)
-
-[node name="Labels" type="Node" parent="."]
-
-[node name="Label" type="Label" parent="Labels"]
-offset_left = 333.0
-offset_top = -109.0
-offset_right = 505.0
-offset_bottom = -55.0
-theme_override_colors/font_color = Color(0.0980392, 0.313726, 0.752941, 1)
-theme_override_fonts/font = ExtResource("6_2gqf0")
-theme_override_font_sizes/font_size = 8
-text = "Space to jump"
