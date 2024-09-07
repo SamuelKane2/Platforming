@@ -1,7 +1,7 @@
 extends Node
 
 var direction = 1
-@onready var camera_2d = $Camera2D
+@onready var camera_2d: Camera2D = %Camera2D
 
 var Location = Vector2(64,64)
 

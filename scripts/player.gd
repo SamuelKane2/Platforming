@@ -22,6 +22,7 @@ func _physics_process(delta):
 	var direction = Input.get_axis("move_left", "move_right")
 
 	#Flip the Sprite
+	
 	if direction > 0:
 		animated_sprite.flip_h = false
 	elif direction < 0:
@@ -52,6 +53,3 @@ func add_point():
 	score += 1
 	score_label.text = str(score)
 	
-@onready var killzone = $"../Killzone"
-
-

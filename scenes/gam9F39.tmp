@@ -272,19 +272,18 @@ theme_override_font_sizes/font_size = 16
 script = ExtResource("5_op6y2")
 
 [node name="Killzone" parent="." instance=ExtResource("5_s2lc3")]
-unique_name_in_owner = true
 position = Vector2(69, 96)
-disable_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_040m3")
 
-[node name="Enemies" type="Node" parent="."]
+[node name="Enemies" type="Node" parent="Killzone"]
 
-[node name="Slime2" parent="Enemies" instance=ExtResource("6_tlbul")]
+[node name="Slime2" parent="Killzone/Enemies" instance=ExtResource("6_tlbul")]
 position = Vector2(103, 18)
 
-[node name="Slime" parent="Enemies" instance=ExtResource("6_tlbul")]
+[node name="Slime" parent="Killzone/Enemies" instance=ExtResource("6_tlbul")]
 position = Vector2(820, -110)
 
 [node name="Coins" type="Node" parent="."]
