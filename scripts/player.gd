@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+class_name Player
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
@@ -51,5 +52,18 @@ var score = 0
 
 func add_point():
 	score += 1
-	score_label.text = str(score)
+	score_label.text = "Coins: " + str(score)
 	
+@onready var timer = %Timer
+@onready var death_screen = %DeathScreen
+
+func do_death():
+	print("You died!")
+	self.get_node("CollisionShape2D").queue_free()
+	timer.start()
+	death_screen.visible = true
+	get_tree().paused = true
+	
+func _on_timer_timeout():
+	get_tree().paused = false
+	get_tree().reload_current_scene()
