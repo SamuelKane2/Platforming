@@ -58,7 +58,6 @@ func add_point():
 @onready var death_screen = %DeathScreen
 
 func do_death():
-	print("You died!")
 	self.get_node("CollisionShape2D").queue_free()
 	timer.start()
 	death_screen.visible = true
