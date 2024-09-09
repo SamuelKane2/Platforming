@@ -52,7 +52,6 @@ var score = 0
 
 func add_point():
 	score += 1
-
 	score_label.text = "Coins: " + str(score)
 	
 @onready var timer = %Timer
@@ -67,4 +66,3 @@ func do_death():
 func _on_timer_timeout():
 	get_tree().paused = false
 	get_tree().reload_current_scene()
-
