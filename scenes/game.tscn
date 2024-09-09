@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://0nw0jubu1nd" path="res://scenes/killzone.tscn" id="5_s2lc3"]
 [ext_resource type="FontFile" uid="uid://43l0r3bovijg" path="res://assets/fonts/PixelOperator8.ttf" id="6_2gqf0"]
 [ext_resource type="PackedScene" uid="uid://bp83g2s0h7xfi" path="res://scenes/slime.tscn" id="6_tlbul"]
-[ext_resource type="PackedScene" uid="uid://c8fyf6jtrncnl" path="res://scenes/DeathScreen.tscn" id="10_xyhso"]
+[ext_resource type="PackedScene" path="res://scenes/DeathScreen.tscn" id="10_xyhso"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5661i"]
 texture = ExtResource("2_ibs1t")
