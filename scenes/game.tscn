@@ -509,6 +509,7 @@ offset_left = -10.0
 offset_top = -26.0
 offset_right = 67.0
 offset_bottom = -3.0
+scale = Vector2(1.00091, 1)
 theme_override_fonts/font = ExtResource("6_2gqf0")
 theme_override_font_sizes/font_size = 16
 script = ExtResource("5_op6y2")
