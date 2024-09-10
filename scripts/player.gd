@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+class_name Player
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
@@ -22,6 +23,7 @@ func _physics_process(delta):
 	var direction = Input.get_axis("move_left", "move_right")
 
 	#Flip the Sprite
+	
 	if direction > 0:
 		animated_sprite.flip_h = false
 	elif direction < 0:
@@ -46,11 +48,10 @@ func _physics_process(delta):
 
 var score = 0
 
-@onready var score_label: Label = $ScoreLabel
+@onready var score_label: Label = %ScoreLabel
 
 func add_point():
 	score += 1
-
 	score_label.text = "Coins: " + str(score)
 	
 @onready var timer = %Timer
@@ -65,6 +66,3 @@ func do_death():
 func _on_timer_timeout():
 	get_tree().paused = false
 	get_tree().reload_current_scene()
-
-
-
