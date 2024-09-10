@@ -499,7 +499,6 @@ layer_1/tile_data = PackedInt32Array(65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0,
 position = Vector2(-10, -18)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-unique_name_in_owner = true
 position = Vector2(0, -7)
 zoom = Vector2(4, 4)
 limit_bottom = 150
@@ -507,8 +506,8 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Killzone" parent="." instance=ExtResource("5_s2lc3")]
-unique_name_in_owner = true
 position = Vector2(69, 96)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(-7, 111)
@@ -641,9 +640,9 @@ position = Vector2(1218, 142)
 [node name="Slime6" parent="Enemies" instance=ExtResource("10_ajel3")]
 position = Vector2(1007, 142)
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ScoreLabel" type="Label" parent="UI"]
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
 offset_left = 40.0
 offset_top = 30.0
@@ -655,13 +654,11 @@ theme_override_font_sizes/font_size = 40
 text = "Coins: 0"
 script = ExtResource("5_op6y2")
 
-[node name="DeathScreen" parent="UI" instance=ExtResource("11_lec56")]
+[node name="DeathScreem" parent="CanvasLayer" instance=ExtResource("11_lec56")]
 unique_name_in_owner = true
 visible = false
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
-process_mode = 3
-wait_time = 0.73
 
 [connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
