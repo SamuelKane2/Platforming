@@ -5,6 +5,10 @@ class_name Player
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 
+# Double Jump Variables
+var jump_count = 0
+var max_jumps = 2
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -15,10 +19,15 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	# If on floor reset jump count
+	if is_on_floor():
+		jump_count = 0
 
+	# Double jump.
+	if Input.is_action_just_pressed("jump") and jump_count < max_jumps:
+		velocity.y = JUMP_VELOCITY
+		jump_count += 1
+	
 	# Get the input direction: -1, 0, 1
 	var direction = Input.get_axis("move_left", "move_right")
 
@@ -53,6 +62,7 @@ func add_point():
 	score += 1
 	score_label.text = "Coins: " + str(score)
 
+# Death screen
 @onready var timer = %Timer
 @onready var death_screen = %DeathScreen
 
@@ -65,3 +75,4 @@ func do_death():
 func _on_timer_timeout():
 	get_tree().paused = false
 	get_tree().reload_current_scene()
+
