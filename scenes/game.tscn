@@ -272,7 +272,7 @@ script = ExtResource("13_5hhyq")
 
 [node name="WinShape" type="CollisionShape2D" parent="Winzone"]
 unique_name_in_owner = true
-position = Vector2(50, -27)
+position = Vector2(70, -28)
 shape = SubResource("RectangleShape2D_2cfwg")
 
 [node name="Coins" type="Node" parent="."]
