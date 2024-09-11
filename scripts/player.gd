@@ -55,7 +55,7 @@ func add_point():
 
 @onready var timer = %Timer
 @onready var death_screen = %DeathScreen
-
+@onready var end_screen = %EndScreen
 func do_death():
 	self.get_node("CollisionShape2D").queue_free()
 	timer.start()
@@ -65,3 +65,9 @@ func do_death():
 func _on_timer_timeout():
 	get_tree().paused = false
 	get_tree().reload_current_scene()
+
+func do_end():
+	self.get_node("winShape").queue_free()
+	timer.start()
+	end_screen.visible = true
+	
