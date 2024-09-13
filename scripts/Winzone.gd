@@ -1,7 +1,7 @@
 extends Area2D
 
 func _on_body_entered(body):
-	$DeathSFX.play()
-	print("Killzone trigger")
+	print("Winzone trigger")
 	if body is Player:
-		body.do_death()
+		body.do_end()
+		
